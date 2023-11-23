@@ -16,6 +16,7 @@ const db = mysql.createConnection({
 	password: "app2027",
 	database: "myBookshop",
 });
+
 // Connect to the database
 db.connect((err) => {   
 	if (err) {
