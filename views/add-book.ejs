@@ -7,10 +7,13 @@
 	<body>
 		<h1><%=shopName%>: Add book</h1>
 		<form action="/bookadded" method="POST">
+
+			<!--takes text input for name of book-->
 			<label for="price">Book name: </label>
 			<input id="name" type="text" name="name" value="Add a book name" />
 			<br />
 
+			<!--takes input for book price-->
 			<label for="price">Book price: </label>
 			<!--input for price is changed to number, with 2 decimal places, no less than 0-->
 			<input

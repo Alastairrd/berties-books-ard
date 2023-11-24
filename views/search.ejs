@@ -1,15 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Search <%=shopName%></title>
-    <link rel="stylesheet"  type="text/css" href="/main.css" />
-  </head>
-  <body>
-    <h1>Search <%=shopName%></h1>
-    <form action="/search-result" method="GET">
-      <p>What book do you want?</p>
-      <input id="search-box" type="text" name="keyword" value="Default">
-      <input type="submit" value="Search" >
-    </form>
-  </body>
+	<head>
+		<title>Search <%=shopName%></title>
+		<link rel="stylesheet" type="text/css" href="/main.css" />
+	</head>
+	<body>
+		<h1>Search <%=shopName%></h1>
+		<form action="/search-result" method="GET">
+			<p>What book do you want?</p>
+			<label for="adv">Advanced Search</label>
+
+			<!--check box for turning on advanced search-->
+			<input
+				id="adv"
+				type="checkbox"
+				name="advsearch"
+				value="true"
+			/><br />
+
+      <!--search box input-->
+			<input id="search-box" type="text" name="keyword" value="Default" />
+			<input type="submit" value="Search" />
+		</form>
+	</body>
 </html>

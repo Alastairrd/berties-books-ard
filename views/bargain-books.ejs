@@ -7,6 +7,8 @@
   <body>
     <h1><%=shopName%> Shop - Bargain List</h1>
     <h2>Here are the books under £20, bargains!:</h2>
+
+    <!--will loop through all books in database where price < 20-->
       <ul>
         <% for (let i = 0; i < availableBooks.length; i++) { %>
           <li><%= availableBooks[i].name %>, £<%= availableBooks[i].price %></li> 

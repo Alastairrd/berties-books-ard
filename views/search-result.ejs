@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%=shopName%> Search Results</title>
+		<link rel="stylesheet" type="text/css" href="/main.css" />
+	</head>
+	<body>
+		<h1><%=shopName%> Shop: Search Results</h1>
+		<h2>Here are the books related to your search:</h2>
+		<ul>
+      <!--display all returned books from database-->
+			<% if(availableBooks.length != 0) { %> 
+        <% for (let i = 0; i < availableBooks.length; i++) { %>
+			<li>
+				<%= availableBooks[i].name %>, £<%= availableBooks[i].price %>
+			</li>
+
+      <!--if there are no results to display, send this message-->
+			<% } %> <% }else{ %>
+			<li>Sorry, there are no results matching your query!</li>
+			<% } %>
+		</ul>
+	</body>
+</html>
