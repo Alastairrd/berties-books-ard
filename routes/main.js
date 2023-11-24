@@ -23,11 +23,13 @@ module.exports = function (app, shopData) {
 
 		//check for adv search, set sqlquery to relevant value
 		if (req.query.advsearch == "true") {
+			//partial match
 			sqlquery =
 				"SELECT * FROM books WHERE name like '%" +
 				req.query.keyword +
 				"%'";
 		} else {
+			//exact match
 			sqlquery =
 				"SELECT * FROM books WHERE name = '" + req.query.keyword + "'";
 		}
