@@ -66,7 +66,7 @@ module.exports = function (app, shopData) {
 				res.send(
 					" This book is added to database, name: " +
 						req.body.name +
-						" price: " +
+						", price: " +
 						req.body.price
 				);
 			}
